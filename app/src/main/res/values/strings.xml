@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AppPortfolio</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="intro_text">Android Nano-degree Portfolio</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_project_1">Project 1</string>
+    <string name="button_project_2">Project 2</string>
+    <string name="button_project_3">Project 3</string>
+</resources>
