@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnP1, btnP2, btnP3;
+//    Button[] btns = new Button[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,32 +24,38 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        btnP1 = (Button) findViewById(R.id.btnP1);
-        btnP2 = (Button) findViewById(R.id.btnP2);
-        btnP3 = (Button) findViewById(R.id.btnP3);
-
-        btnP1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Project 1 not yet done", Toast.LENGTH_SHORT).show();
-            }
-        });
-        
-        btnP2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Project 2 not yet done", Toast.LENGTH_SHORT).show();
-            }
-        });
-        
-        btnP3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Project 3 not yet done", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        btns[0] = (Button) findViewById(R.id.btnP1);
+//        btns[1] = (Button) findViewById(R.id.btnP2);
+//        btns[2] = (Button) findViewById(R.id.btnP3);
+//
+//        for (int i = 0; i < btns.length; i++){
+//            btns[i].setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    displayToast("Project not done");
+//                }
+//            });
+//        }
 
         return true;
+    }
+
+    public void displayAction(View view){
+        switch (view.getId()){
+            case R.id.btnP1:
+                displayToast("Project 1");
+                break;
+            case R.id.btnP2:
+                displayToast("Project 2");
+                break;
+            case R.id.btnP3:
+                displayToast("Project 3");
+                break;
+        }
+    }
+
+    public void displayToast(String project){
+        Toast.makeText(MainActivity.this, project, Toast.LENGTH_SHORT).show();
     }
 
     @Override

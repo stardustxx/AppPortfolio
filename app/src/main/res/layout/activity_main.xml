@@ -17,33 +17,27 @@
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="@string/button_project_1"
-        android:layout_marginTop="30dp"
         android:layout_below="@+id/intro"
         android:id="@+id/btnP1"
+        android:onClick="displayAction"
+        style="@style/ButtonStyle"
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="@string/button_project_2"
         android:layout_below="@+id/btnP1"
-        android:layout_marginTop="30dp"
         android:id="@+id/btnP2"
+        android:onClick="displayAction"
+        style="@style/ButtonStyle"
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:text="@string/button_project_3"
         android:layout_below="@+id/btnP2"
-        android:layout_marginTop="30dp"
         android:id="@+id/btnP3"
+        android:onClick="displayAction"
+        style="@style/ButtonStyle"
         />
 
 </RelativeLayout>
